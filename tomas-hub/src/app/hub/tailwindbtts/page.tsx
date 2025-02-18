@@ -16,7 +16,7 @@ export default function Tailwindbtts() {
     return (
         <div className="flex h-screen bg-gray-500 overflow-y-auto">
             {/* Left Sidebar with collection buttons */}
-            <div className="w-64 bg-gray-800 text-white p-4">
+            <div className="w-1/6 bg-gray-800 text-white p-4">
                 <nav className="flex flex-col">
                     <Link href="../">
                         <HomeIcon className="h-6 w-6 text-white cursor-pointer" />
