@@ -45,35 +45,35 @@ export default function GradientButtonViewer() {
   };
 
   return (
-    <div className="flex flex-grow w-full border-1 bg-gray-500 items-center justify-center h-screen">
-      <div className="flex flex-grow flex-row p-6 border-2 shadow-lg bg-gray-800 rounded-lg text-white w-full">
-        {/* Left Part: Buttons */}
-        <div className="flex flex-col p-6 border-2 bg-gray-700 rounded-md w-1/3">
-          {buttons.map((btn, index) => (
-            <motion.button
-              key={index}
-              className="relative px-6 py-2 rounded-lg shadow-lg text-white overflow-hidden mb-4"
-              onClick={() => setSelectedCode(generateCode(btn.gradient))} // Update code when button is clicked
-              initial={{
-                background: `linear-gradient(to right, ${btn.gradient[0]}, ${btn.gradient[1]})` // Dynamically set the gradient
-              }}
-              whileHover={{
-                background: `linear-gradient(to right, ${btn.gradient[1]}, ${btn.gradient[0]})` // Dynamically set the gradient on hover
-              }}
-              transition={{ duration: 0.4 }}
-            >
-              {btn.label}
-            </motion.button>
-          ))}
-        </div>
+    <div className="flex flex-grow w-full border-1 bg-gray-500 items-center justify-center h-full">
+        <div className="flex flex-grow flex-row p-6 border-2 shadow-lg bg-gray-800 rounded-lg text-white w-full">
+            {/* Left Part: Buttons */}
+            <div className="flex flex-col p-6 border-2 bg-gray-700 rounded-md w-1/3">
+                {buttons.map((btn, index) => (
+                    <motion.button
+                        key={index}
+                        className="relative px-6 py-2 rounded-lg shadow-lg text-white overflow-hidden mb-4"
+                        onClick={() => setSelectedCode(generateCode(btn.gradient))}
+                        initial={{
+                            background: `linear-gradient(to right, ${btn.gradient[0]}, ${btn.gradient[1]})`
+                        }}
+                        whileHover={{
+                            background: `linear-gradient(to right, ${btn.gradient[1]}, ${btn.gradient[0]})`
+                        }}
+                        transition={{ duration: 0.4 }}
+                    >
+                        {btn.label}
+                    </motion.button>
+                ))}
+            </div>
 
-        {/* Right Part: Code Display */}
-        <div className="flex-grow p-4 bg-gray-900 rounded-lg shadow-md w-2/3 text-sm mt-6 overflow-auto">
-          <pre className="whitespace-pre-wrap text-green-400">
-            <code>{selectedCode}</code>
-          </pre>
+            {/* Right Part: Code Display */}
+            <div className="flex-grow p-4 bg-gray-900 rounded-lg shadow-md w-2/3 text-sm mt-6 overflow-auto">
+                <pre className="whitespace-pre-wrap text-green-400">
+                    <code>{selectedCode}</code>
+                </pre>
+            </div>
         </div>
-      </div>
     </div>
-  );
+);
 }

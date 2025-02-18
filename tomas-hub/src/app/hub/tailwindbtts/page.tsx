@@ -40,21 +40,18 @@ export default function Tailwindbtts() {
                     </div>
                 </nav>
             </div>
-
+    
             {/* Right Main Content Area */}
-            <div className="flex w-full border-2">
+            <div className="flex-1 border-2">
                 {/* Render content based on the selected collection */}
                 {openCollection === 1 && (
                     <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: openCollection === 1 ? "auto" : 0, opacity: openCollection === 1 ? 1 : 0 }}
                         transition={{ duration: 0.2, ease: "easeInOut" }}
-                        className="w-full max-w-lg"
+                        className="w-full"
                     >
-                        <div className="m-3">
-                            <GradientButtonViewer />
-                        </div>
-                        
+                        <GradientButtonViewer />
                     </motion.div>
                 )}
                 {openCollection === 2 && (
@@ -62,7 +59,7 @@ export default function Tailwindbtts() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: openCollection === 2 ? "auto" : 0, opacity: openCollection === 2 ? 1 : 0 }}
                         transition={{ duration: 0.2, ease: "easeInOut" }}
-                        className="w-full max-w-lg"
+                        className="w-full"
                     >
                         {/* Replace with the actual component for this collection */}
                         <div>Another collection content goes here</div>
