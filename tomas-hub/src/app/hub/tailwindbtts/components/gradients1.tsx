@@ -45,7 +45,7 @@ export default function GradientButtonViewer() {
   };
 
   return (
-    <div className="flex bg-gray-500 items-center justify-center min-h-screen">
+    <div className="flex bg-gray-500 items-center justify-center">
       <div className="flex flex-col p-6 border-1 shadow-lg bg-gray-800 rounded-lg text-white">
         {/* Top Part: Buttons */}
         <div className="flex gap-6 border-2 p-6 rounded-md bg-gray-700">
@@ -68,13 +68,15 @@ export default function GradientButtonViewer() {
         </div>
 
         {/* Bottom Part: Code Display */}
-        <div className="bg-gray-900 p-4 rounded-lg shadow-md w-full max-w-lg text-sm mt-6">
-          <code className="block text-green-400">{selectedCode}</code>
+        <div className="bg-gray-900 p-4 rounded-lg shadow-md w-full max-w-lg text-sm mt-6 overflow-auto">
+          <pre className="whitespace-pre-wrap text-green-400">
+            <code>{selectedCode}</code>
+          </pre>
         </div>
       </div>
-      
+
     </div>
   );
 
-  
+
 }
