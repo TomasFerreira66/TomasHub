@@ -45,14 +45,14 @@ export default function GradientButtonViewer() {
   };
 
   return (
-    <div className="flex bg-gray-500 items-center justify-center">
-      <div className="flex flex-col p-6 border-1 shadow-lg bg-gray-800 rounded-lg text-white">
-        {/* Top Part: Buttons */}
-        <div className="flex gap-6 border-2 p-6 rounded-md bg-gray-700">
+    <div className="flex flex-grow w-full border-1 bg-gray-500 items-center justify-center h-screen">
+      <div className="flex flex-grow flex-row p-6 border-2 shadow-lg bg-gray-800 rounded-lg text-white w-full">
+        {/* Left Part: Buttons */}
+        <div className="flex flex-col p-6 border-2 bg-gray-700 rounded-md w-1/3">
           {buttons.map((btn, index) => (
             <motion.button
               key={index}
-              className="relative px-6 py-2 rounded-lg shadow-lg text-white overflow-hidden"
+              className="relative px-6 py-2 rounded-lg shadow-lg text-white overflow-hidden mb-4"
               onClick={() => setSelectedCode(generateCode(btn.gradient))} // Update code when button is clicked
               initial={{
                 background: `linear-gradient(to right, ${btn.gradient[0]}, ${btn.gradient[1]})` // Dynamically set the gradient
@@ -67,16 +67,13 @@ export default function GradientButtonViewer() {
           ))}
         </div>
 
-        {/* Bottom Part: Code Display */}
-        <div className="bg-gray-900 p-4 rounded-lg shadow-md w-full max-w-lg text-sm mt-6 overflow-auto">
+        {/* Right Part: Code Display */}
+        <div className="flex-grow p-4 bg-gray-900 rounded-lg shadow-md w-2/3 text-sm mt-6 overflow-auto">
           <pre className="whitespace-pre-wrap text-green-400">
             <code>{selectedCode}</code>
           </pre>
         </div>
       </div>
-
     </div>
   );
-
-
 }
