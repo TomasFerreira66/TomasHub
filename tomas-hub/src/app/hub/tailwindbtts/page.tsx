@@ -42,7 +42,7 @@ export default function Tailwindbtts() {
             </div>
     
             {/* Right Main Content Area */}
-            <div className="flex-1 border-2">
+            <div className="flex-1">
                 {/* Render content based on the selected collection */}
                 {openCollection === 1 && (
                     <motion.div
@@ -64,7 +64,11 @@ export default function Tailwindbtts() {
                         {/* Replace with the actual component for this collection */}
                         <div>Another collection content goes here</div>
                     </motion.div>
+
+                    
                 )}
+
+                
             </div>
         </div>
     );

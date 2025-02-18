@@ -10,16 +10,40 @@ interface Button {
 
 const buttons: Button[] = [
   {
-    label: 'Purple Gradient',
+    label: 'Fade button',
     gradient: ['#a855f7', '#ec4899'],
   },
   {
-    label: 'Blue Gradient',
+    label: 'Soft Blue button',
     gradient: ['#3b82f6', '#06b6d4'],
   },
   {
-    label: 'Green Gradient',
+    label: 'Mint Fresh button',
     gradient: ['#22c55e', '#a3e635'],
+  },
+  {
+    label: 'Golden Hour button',
+    gradient: ['#ffd700', '#ff8c00']
+  },
+  {
+    label: 'Pink Lemonade button',
+    gradient: ['#ff9a9e', '#fdffcc']
+  },
+  {
+    label: 'Deep Space button',
+    gradient: ['#0f2027', '#203a43']
+  },
+  {
+    label: 'Tropical Sunset button',
+    gradient: ['#f12711', '#f5af19']
+  },
+  {
+    label: 'Its gonna rain button',
+    gradient: ['#ccfcff', '#516c6e']
+  },
+  {
+    label: 'Swamp button',
+    gradient: ['#1f1d36', '#253b2b']
   }
 ];
 
@@ -37,7 +61,7 @@ export default function GradientButtonViewer() {
   whileHover={{
     background: 'linear-gradient(to right, ${gradient[1]}, ${gradient[0]})'
   }}
-  transition={{ duration: 0.5 }}
+  transition={{ duration: 0.3 }}
 >
   Button Label
 </motion.button>
@@ -46,7 +70,7 @@ export default function GradientButtonViewer() {
 
   return (
     <div className="flex flex-grow w-full border-1 bg-gray-500 items-center justify-center h-full">
-        <div className="flex flex-grow flex-row p-6 border-2 shadow-lg bg-gray-800 rounded-lg text-white w-full">
+        <div className="flex flex-grow flex-row p-6 shadow-lg bg-gray-600 text-white w-full">
             {/* Left Part: Buttons */}
             <div className="flex flex-col p-6 border-2 bg-gray-700 rounded-md w-1/3">
                 {buttons.map((btn, index) => (
@@ -60,7 +84,7 @@ export default function GradientButtonViewer() {
                         whileHover={{
                             background: `linear-gradient(to right, ${btn.gradient[1]}, ${btn.gradient[0]})`
                         }}
-                        transition={{ duration: 0.4 }}
+                        transition={{ duration: 0.3 }}
                     >
                         {btn.label}
                     </motion.button>
