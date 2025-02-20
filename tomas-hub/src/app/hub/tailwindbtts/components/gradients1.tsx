@@ -104,19 +104,35 @@ export default function GradientButtonViewer() {
             <div className="space-y-4">
               {/* Color Pickers */}
               <div className="flex space-x-4">
-                <input
-                  type="color"
-                  value={customGradient[0]}
-                  onChange={(e) => setCustomGradient([e.target.value, customGradient[1]])}
-                  className="w-12 h-12"
-                />
-                <input
-                  type="color"
-                  value={customGradient[1]}
-                  onChange={(e) => setCustomGradient([customGradient[0], e.target.value])}
-                  className="w-12 h-12"
-                />
+                {/* Custom Color Picker 1 */}
+                <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-md">
+                  <input
+                    type="color"
+                    value={customGradient[0]}
+                    onChange={(e) => setCustomGradient([e.target.value, customGradient[1]])}
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" // Ensure input is on top
+                  />
+                  <div
+                    className="absolute inset-0 w-full h-full"
+                    style={{ backgroundColor: customGradient[0] }}
+                  />
+                </div>
+
+                {/* Custom Color Picker 2 */}
+                <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-md">
+                  <input
+                    type="color"
+                    value={customGradient[1]}
+                    onChange={(e) => setCustomGradient([customGradient[0], e.target.value])}
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" // Ensure input is on top
+                  />
+                  <div
+                    className="absolute inset-0 w-full h-full"
+                    style={{ backgroundColor: customGradient[1] }}
+                  />
+                </div>
               </div>
+
               {/* Label Input */}
               <input
                 type="text"
@@ -125,7 +141,9 @@ export default function GradientButtonViewer() {
                 placeholder="Button Label"
                 className="w-full px-4 py-2 bg-gray-800 rounded-md text-white"
               />
+
               <h1>Hover to see how it looks!</h1>
+
               {/* Preview Button */}
               <motion.button
                 className="w-full px-6 py-2 rounded-lg shadow-lg text-white overflow-hidden"
