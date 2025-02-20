@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { HomeIcon } from '@heroicons/react/24/solid';
-import GradientButtonViewer from './components/gradients1';  // Correct relative path
+import GradientButtonViewer from './components/gradients';  // Correct relative path
+import LavaLampButtonViewer from './components/lavalamp';
 import { motion } from 'framer-motion';
 
 export default function Tailwindbtts() {
@@ -61,8 +62,7 @@ export default function Tailwindbtts() {
                         transition={{ duration: 0.2, ease: "easeInOut" }}
                         className="w-full"
                     >
-                        {/* Replace with the actual component for this collection */}
-                        <div>Another collection content goes here</div>
+                        <LavaLampButtonViewer/>
                     </motion.div>
 
                     
