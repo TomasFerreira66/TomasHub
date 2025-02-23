@@ -62,7 +62,7 @@ export default function Tailwindbtts() {
                         transition={{ duration: 0.2, ease: "easeInOut" }}
                         className="w-full"
                     >
-                        <LavaLampButtonViewer/>
+                        <h1>Temp</h1>
                     </motion.div>
 
                     
