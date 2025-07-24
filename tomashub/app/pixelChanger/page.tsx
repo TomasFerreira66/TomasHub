@@ -201,11 +201,8 @@ const PixelArtCreator: React.FC = () => {
       <div className="max-w-6xl mx-auto p-4 md:p-8">
         <div className="text-center mb-6 md:mb-8">
           <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-2 md:mb-4">
-            🎨 Cute Pixel Art Creator ✨
+            🎨 Pixel Art Creator ✨
           </h1>
-          <p className="text-gray-600 text-sm md:text-lg">
-            Create adorable 16x16 pixel art! 💖
-          </p>
         </div>
 
         {/* Main Content */}
@@ -395,43 +392,7 @@ const PixelArtCreator: React.FC = () => {
 
         {/* Mobile Bottom Spacing */}
         <div className="lg:hidden h-20"></div>
-
-        {/* Instructions */}
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl md:rounded-3xl p-4 md:p-8 border-2 border-blue-100 shadow-xl">
-          <h3 className="text-xl md:text-2xl font-bold text-center text-blue-800 mb-4">
-            🌟 How to Create Cute Art
-          </h3>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-            <ul className="text-blue-700 space-y-2 md:space-y-3 text-sm md:text-base">
-              <li className="flex items-center gap-3">
-                <span className="text-lg md:text-xl">🎨</span>
-                <span>Pick a color from the palette</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-lg md:text-xl">✏️</span>
-                <span>Use pencil to draw pixels</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-lg md:text-xl">🧹</span>
-                <span>Use eraser to fix mistakes</span>
-              </li>
-            </ul>
-            <ul className="text-blue-700 space-y-2 md:space-y-3 text-sm md:text-base">
-              <li className="flex items-center gap-3">
-                <span className="text-lg md:text-xl">🗑️</span>
-                <span>Clear canvas to start over</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-lg md:text-xl">💾</span>
-                <span>Download your creation</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-lg md:text-xl">🚀</span>
-                <span>Perfect for sprites!</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
