@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import ProjectsGrid from './components/projectGrid';
 import { AnimatePresence, motion } from 'framer-motion';
+import { MdLocationOn, MdVerified, MdSchool } from 'react-icons/md';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('Me');
@@ -17,47 +18,55 @@ export default function Home() {
 
               {/* Profile and Info Grid */}
               <div className="grid md:grid-cols-2 gap-8 items-start">
-                {/* Left Side - Minimalistic Info */}
+                {/* Left Side - Info and Mobile Image */}
                 <div className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                    </svg>
-                    <span className="text-gray-800">Portugal, Braga</span>
-                  </div>
+                  <div className="flex gap-6 items-start">
+                    {/* Minimalistic Info */}
+                    <div className="space-y-6 flex-1">
+                      <div className="flex items-center gap-3">
+                        <MdLocationOn className="w-5 h-5 text-gray-600" />
+                        <span className="text-gray-800 text-sm">Portugal, Braga</span>
+                      </div>
 
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                    <span className="text-gray-800">23 years old</span>
-                  </div>
+                      <div className="flex items-center gap-3">
+                        <MdVerified className="w-5 h-5 text-gray-600" />
+                        <span className="text-gray-800 text-sm">23 years old</span>
+                      </div>
 
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.909V17h2V9L12 3z" />
-                    </svg>
-                    <span className="text-gray-800">Bachelor of Science in Computer Systems Engineering</span>
+                      <div className="flex items-center gap-3">
+                        <MdSchool className="w-5 h-5 text-gray-600" />
+                        <span className="text-gray-800 text-sm">B.Sc. in Computer Systems Engineering</span>
+                      </div>
+                    </div>
+
+                    {/* Mobile Image - Only visible on mobile */}
+                    <div className="md:hidden">
+                      <img
+                        src="/ppfp.png"
+                        alt="Tomás Ferreira"
+                        className="w-32 h-32 object-cover rounded-2xl shadow-lg"
+                      />
+                    </div>
                   </div>
 
                   <div className="pt-4">
-                    <p className="text-base md:text-lg text-gray-500 leading-relaxed">
-                      I'm passionate about building clean, functional, and visually engaging web experiences.
+                    <p className="text-base md:text-lg text-gray-500 leading-relaxed text-justify">
+                      I'm passionate about building clean, functional, and visually engaging web apps.
                       I enjoy working with modern technologies to bring ideas to life, whether it's a portfolio, an interactive tool, or a full-stack app,
                       I always constantly push myself to explore new tools and improve the way I build things.
                     </p>
                   </div>
                 </div>
 
-                {/* Right Side - Profile Image */}
-                <div className="flex justify-center md:justify-end">
-                  <div className="relative">
-                    <img
-                      src="/ppfp.png"
-                      alt="Tomás Ferreira"
-                      className="w-64 h-64 object-cover rounded-2xl shadow-lg"
-                    />
-                  </div>
+                {/* Desktop Image - Only visible on desktop */}
+                <div className="hidden md:flex justify-center md:justify-end">
+                  <div className="hidden md:flex justify-center md:justify-end">
+                  <img
+                    src="/ppfp.png"
+                    alt="Tomás Ferreira"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
                 </div>
               </div>
             </section>
@@ -102,10 +111,10 @@ export default function Home() {
 
                 {/* Databases */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-gray-900">Databases</h3>
+                  <h3 className="text-xl font-medium text-gray-900">DB</h3>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
-                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="SQL" className="w-4 h-4" />
+                      <img src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png" alt="SQL" className="w-4 h-4" />
                       SQL
                     </span>
                     <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
@@ -159,10 +168,6 @@ export default function Home() {
                       <h4 className="text-sm font-medium text-gray-900 mb-1">Phone</h4>
                       <p className="text-sm text-gray-600">+351 937 957 936</p>
                     </div>
-                    <div>
-                      <h4 className="text-sm font-medium text-gray-900 mb-1">Location</h4>
-                      <p className="text-sm text-gray-600">Braga, Portugal</p>
-                    </div>
                   </div>
                 </div>
                 {/* Social Links */}
@@ -170,7 +175,7 @@ export default function Home() {
                   <h3 className="text-xl md:text-3xl font-light text-gray-900">Connect With Me</h3>
                   <div className="flex gap-4">
                     <a
-                      href="https://github.com/tomasff2002"
+                      href="https://github.com/tomasferreira66"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-center w-12 h-12 bg-gray-900 hover:bg-gray-800 rounded-full transition-colors"
@@ -181,7 +186,7 @@ export default function Home() {
                       </svg>
                     </a>
                     <a
-                      href="https://linkedin.com/in/tomasff2002"
+                      href="https://linkedin.com/in/tomás-ferreira-891405236"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-center w-12 h-12 bg-blue-700 hover:bg-blue-800 rounded-full transition-colors"
