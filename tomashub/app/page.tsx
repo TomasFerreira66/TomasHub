@@ -14,37 +14,158 @@ export default function Home() {
             {/* About Me Section */}
             <section className="space-y-8">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900">About Me</h2>
-              <div className="space-y-6">
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                  I'm Tomás Ferreira, a Portuguese software developer with a Bachelor's degree in Computer Systems Engineering and a strong focus on web development.
-                </p>
-                <p className="text-base md:text-lg text-gray-500 leading-relaxed">
-                  I'm passionate about building clean, functional, and visually engaging web experiences.
-                  I enjoy working with modern technologies to bring ideas to life, whether it's a portfolio, an interactive tool, or a full-stack app,
-                  I always constantly push myself to explore new tools and improve the way I build things.
-                </p>
+
+              {/* Profile and Info Grid */}
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                {/* Left Side - Minimalistic Info */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                    <span className="text-gray-800">Portugal, Braga</span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    <span className="text-gray-800">23 years old</span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.909V17h2V9L12 3z" />
+                    </svg>
+                    <span className="text-gray-800">Bachelor of Science in Computer Systems Engineering</span>
+                  </div>
+
+                  <div className="pt-4">
+                    <p className="text-base md:text-lg text-gray-500 leading-relaxed">
+                      I'm passionate about building clean, functional, and visually engaging web experiences.
+                      I enjoy working with modern technologies to bring ideas to life, whether it's a portfolio, an interactive tool, or a full-stack app,
+                      I always constantly push myself to explore new tools and improve the way I build things.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Side - Profile Image */}
+                <div className="flex justify-center md:justify-end">
+                  <div className="relative">
+                    <img
+                      src="/ppfp.png"
+                      alt="Tomás Ferreira"
+                      className="w-64 h-64 object-cover rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </div>
               </div>
             </section>
+
+            {/* Tech Stack Section */}
+            <section className="space-y-8">
+              <h2 className="text-3xl md:text-4xl font-light text-gray-900">Tech Stack</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* My Expertise */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-medium text-gray-900">My expertise</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="w-4 h-4" />
+                      React
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-4 h-4" />
+                      Javascript
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" />
+                      Typescript
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full">
+                      REST APIs
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="Next.js" className="w-4 h-4" />
+                      Next.js
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind" className="w-4 h-4" />
+                      Tailwind
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://www.vectorlogo.zone/logos/framer/framer-icon.svg" alt="Framer Motion" className="w-4 h-4" />
+                      Motion
+                    </span>
+                  </div>
+                </div>
+
+                {/* Databases */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-medium text-gray-900">Databases</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="SQL" className="w-4 h-4" />
+                      SQL
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="SQLite" className="w-4 h-4" />
+                      SQLite
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" className="w-4 h-4" />
+                      Firebase
+                    </span>
+                  </div>
+                </div>
+
+                {/* Experienced In */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-medium text-gray-900">Experienced In</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" className="w-4 h-4" />
+                      Kotlin
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C#" className="w-4 h-4" />
+                      C#
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" className="w-4 h-4" />
+                      Python
+                    </span>
+                    <span className="px-3 py-1 bg-white border border-gray-200 text-gray-800 text-sm rounded-full flex items-center gap-1">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" className="w-4 h-4" />
+                      Laravel
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             {/* Contact & Socials Side by Side on Desktop */}
             <section className="space-y-8">
               <div className="grid grid-cols-2 gap-8 items-start">
                 {/* Contact Info */}
                 <div className="space-y-4">
                   <h3 className="text-xl md:text-3xl font-light text-gray-900">Contact</h3>
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium text-gray-900">Email: </span>
-                    <span className="text-sm text-gray-600">tomasff2002@gmail.com</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium text-gray-900">Phone: </span>
-                    <span className="text-sm text-gray-600">+351 937 957 936</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium text-gray-900">Location: </span>
-                    <span className="text-sm text-gray-600">Braga, Portugal</span>
+                  <div className="space-y-3">
+                    <div>
+                      <h4 className="text-sm font-medium text-gray-900 mb-1">Email</h4>
+                      <p className="text-sm text-gray-600">tomasff2002@gmail.com</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-gray-900 mb-1">Phone</h4>
+                      <p className="text-sm text-gray-600">+351 937 957 936</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-gray-900 mb-1">Location</h4>
+                      <p className="text-sm text-gray-600">Braga, Portugal</p>
+                    </div>
                   </div>
                 </div>
-                 {/* Social Links */}
+                {/* Social Links */}
                 <div className="space-y-4">
                   <h3 className="text-xl md:text-3xl font-light text-gray-900">Connect With Me</h3>
                   <div className="flex gap-4">
@@ -84,7 +205,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-8">
+    <div className="min-h-screen flex items-center justify-center py-8 overflow-y-scroll">
       <div className="relative w-full max-w-4xl bg-white rounded-2xl flex flex-col min-h-[80vh] h-[90vh] max-h-[900px] md:h-[85vh] md:max-h-[800px]">
         {/* Navbar at the top, inside the border */}
         <nav className="flex justify-center gap-4 py-4 bg-white rounded-t-2xl border-b border-gray-200">
@@ -94,11 +215,17 @@ export default function Home() {
               onClick={() => setActiveTab(tab)}
               className={`w-32 text-base font-semibold transition-colors py-2 rounded-xl
                 ${activeTab === tab
-                  ? 'text-gray-900 bg-gray-200 border-2 border-gray-900'
-                  : 'text-gray-500 bg-white border-2 border-transparent hover:border-gray-300 hover:bg-gray-50'
+                  ? 'text-gray-900 bg-gray-100 border-2 border-gray-200'
+                  : 'text-gray-500 bg-white border-2 border-transparent hover:border-gray-200 hover:bg-gray-50'
                 }`}
             >
-              {tab}
+              {tab === '</> Projects' ? (
+                <>
+                  <span className="font-bold">&lt;/&gt;</span> Projects
+                </>
+              ) : (
+                tab
+              )}
             </button>
           ))}
         </nav>
@@ -110,7 +237,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.1 }}
               className="h-full"
             >
               {renderContent()}
