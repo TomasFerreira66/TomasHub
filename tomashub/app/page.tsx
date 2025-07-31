@@ -167,7 +167,7 @@ export default function Home() {
                       href="https://github.com/tomasferreira66"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center justify-center w-12 h-12 bg-gray-900 hover:bg-gray-800 rounded-full transition-colors"
+                      className="group flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-gray-800 rounded-full transition-colors"
                       aria-label="GitHub"
                     >
                       <FaGithub className="w-6 h-6 text-white" />
