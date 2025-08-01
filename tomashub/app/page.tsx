@@ -43,7 +43,7 @@ export default function Home() {
                     <img
                       src="/ppfp.png"
                       alt="Tomás Ferreira"
-                      className="w-48 h-48md:w-48 md:h-48 object-cover rounded-2xl shadow-lg"
+                      className="w-48 h-48 md:w-48 md:h-48 object-cover rounded-2xl shadow-lg"
                     />
                   </div>
                 </div>
