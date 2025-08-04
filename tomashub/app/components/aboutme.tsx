@@ -43,7 +43,7 @@ export default function AboutMe() {
 
           <div className="pt-4">
             <p className="text-base md:text-lg text-gray-500 leading-relaxed">
-              My name is Tomás Ferreira and I'm passionate about building functional, clean and visually engaging web experiences.
+              My name is Tomás Ferreira and I'm passionate about building functional, clean and visually engaging software.
               I enjoy working with modern technologies to bring ideas to life, whether it's a portfolio,
               an interactive tool, or a full-stack application. I constantly push myself to explore
               new tools and improve the way I build things.
