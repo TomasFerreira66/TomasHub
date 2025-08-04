@@ -25,7 +25,7 @@ export default function ProjectCard({
         {technologies.map((tech, index) => (
           <span 
             key={index}
-            className="px-3 py-1 bg-green-100 text-gray-700 text-xs rounded-full"
+            className="px-3 py-1 bg-green-100 text-gray-700 text-xs rounded-full font-semibold"
           >
             {tech}
           </span>
@@ -37,7 +37,7 @@ export default function ProjectCard({
             href={visitLink} 
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-gray-900 hover:text-gray-600 font-medium"
+            className="px-3 text-sm text-gray-900 hover:text-gray-600 font-medium border-1 rounded-md"
           >
             Visit
           </a>

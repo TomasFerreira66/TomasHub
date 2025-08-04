@@ -13,7 +13,7 @@ const projectsData = [
 export default function ProjectsGrid() {
   return (
     <div className="max-w-6xl mx-auto space-y-8">
-      <h2 className="text-4xl md:text-5xl font-light text-gray-900">My Projects</h2>
+      <h2 className="text-4xl md:text-5xl font-medium text-gray-900">My Projects</h2>
     
       <div className="grid gap-8">
         {projectsData.map((project, index) => (
