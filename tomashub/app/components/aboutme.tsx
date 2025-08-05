@@ -163,10 +163,6 @@ export default function AboutMe() {
                 <h4 className="text-sm font-medium text-gray-900 mb-1">Email</h4>
                 <p className="text-sm text-gray-600">tomasff2002@gmail.com</p>
               </div>
-              <div>
-                <h4 className="text-sm font-medium text-gray-900 mb-1">Phone</h4>
-                <p className="text-sm text-gray-600">+351 937 957 936</p>
-              </div>
             </div>
           </div>
 
